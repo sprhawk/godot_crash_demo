@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://2hs6mndr45ns"]
+
+[ext_resource type="PackedScene" uid="uid://cgm3fw7ae5klo" path="res://Resources/red_robot/red_robot.dae" id="1_2ddh0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ylh2y"]
+
+[node name="Node" type="Node"]
+script = null
+
+[node name="Pivot" type="Node3D" parent="."]
+script = null
+
+[node name="red_robot" parent="Pivot" instance=ExtResource( "1_2ddh0" )]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.86793, 0, 0, 0, 1.49347, 0, 0, 0, 1, 0, 1.31681, 0)
+shape = SubResource( "BoxShape3D_ylh2y" )
+script = null

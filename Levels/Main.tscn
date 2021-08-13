@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://msiyodnd0u2p"]
+
+[ext_resource type="PackedScene" uid="uid://ct8liiolyrwa1" path="res://Children/Player.tscn" id="2_dyxhq"]
+[ext_resource type="PackedScene" uid="uid://clsur1ewaylop" path="res://Children/Ground.tscn" id="2_usqep"]
+
+[node name="Node" type="Node"]
+script = null
+
+[node name="Ground" parent="." instance=ExtResource( "2_usqep" )]
+
+[node name="Position3D" type="Position3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.907007, 3.4784)
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="Position3D"]
+transform = Transform3D(0.998785, 0, -0.0492856, 0.00227527, 0.998934, 0.0461089, 0.049233, -0.046165, 0.99772, 0, -2.38419e-07, 0)
+current = true
+script = null
+
+[node name="Player" parent="." instance=ExtResource( "2_dyxhq" )]

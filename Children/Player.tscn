@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct8liiolyrwa1"]
+
+[ext_resource type="PackedScene" uid="uid://l3ucygs6asm7" path="res://Resources/player/player.glb" id="1_1vdbl"]
+[ext_resource type="Script" path="res://Children/Player.gd" id="1_2ocmc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3jdq8"]
+radius = 0.856987
+
+[sub_resource type="Animation" id="Animation_gxbbk"]
+resource_name = "t"
+loop = true
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource( "1_2ocmc" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.699716, 0, 0, 0, 0.807732, 0, 0, 0, 1, 0.118413, 0.913876, 0)
+shape = SubResource( "CapsuleShape3D_3jdq8" )
+script = null
+
+[node name="Pivot" type="Node3D" parent="."]
+script = null
+
+[node name="player" parent="Pivot" instance=ExtResource( "1_1vdbl" )]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Pivot/player"]
+autoplay = "t"
+anims/t = SubResource( "Animation_gxbbk" )
+blend_times = []
+script = null
